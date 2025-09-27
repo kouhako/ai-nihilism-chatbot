@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chatbot for Nihilism | Philosophical Companion</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="main-container">
+        <header class="main-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="philosophy-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 12h8"/>
+                            <path d="M12 8v8"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h1 class="main-title">Nihilist AI</h1>
+                </div>
+                <button id="new-chat" class="new-chat-btn">
+                    <span class="material-symbols-rounded">add</span>
+                    New Chat
+                </button>
+            </div>
+        </header>
+
+        <main class="chat-main">
+            <div id="welcome-screen" class="welcome-screen">
+                <div class="welcome-content">
+                    <div class="welcome-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 12h8"/>
+                            <path d="M12 8v8"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h2 class="welcome-title">Chào mừng đến với Nihilist AI</h2>
+                    <p class="welcome-subtitle">Người bạn đồng hành triết học của bạn, khám phá sâu sắc về chủ nghĩa hư vô, hiện sinh và tình trạng con người.</p>
+                    
+                    <div class="quick-questions">
+                        <h3>Một số câu hỏi để bắt đầu:</h3>
+                        <div class="question-grid">
+                            <button class="question-btn" data-question="Ý nghĩa của cuộc sống là gì?">
+                                <span class="material-symbols-rounded">help</span>
+                                Ý nghĩa của cuộc sống là gì?
+                            </button>
+                            <button class="question-btn" data-question="Tại sao chúng ta tồn tại?">
+                                <span class="material-symbols-rounded">psychology</span>
+                                Tại sao chúng ta tồn tại?
+                            </button>
+                            <button class="question-btn" data-question="Có thực sự có ý nghĩa trong vũ trụ này không?">
+                                <span class="material-symbols-rounded">explore</span>
+                                Có thực sự có ý nghĩa trong vũ trụ này không?
+                            </button>
+                            <button class="question-btn" data-question="Làm thế nào để tìm thấy mục đích trong cuộc sống?">
+                                <span class="material-symbols-rounded">lightbulb</span>
+                                Làm thế nào để tìm thấy mục đích trong cuộc sống?
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat-messages" class="chat-messages" style="display: none;">
+            </div>
+        </main>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <div class="input-area">
+                    <textarea id="message-input" class="message-input" placeholder="Chia sẻ suy nghĩ triết học của bạn..." required></textarea>
+                    <div class="input-actions">
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="file-input" hidden accept="image/*" />
+                            <button type="button" id="file-upload" class="action-btn material-symbols-rounded">attach_file</button>
+                            <div id="file-preview" class="file-preview" style="display: none;">
+                                <img id="file-preview-img" src="#" alt="Preview" />
+                                <button type="button" id="file-cancel" class="cancel-btn material-symbols-rounded">close</button>
+                            </div>
+                        </div>
+                        <button type="button" id="send-message" class="send-btn material-symbols-rounded">arrow_upward</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
