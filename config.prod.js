@@ -1,7 +1,7 @@
-// config.prod.js - Production config (safe to commit)
+// config.prod.js - Sử dụng Vercel Environment Variables
 const CONFIG = {
-    // API key sẽ được inject từ Vercel Environment Variables
-    API_KEY: process.env.GEMINI_API_KEY || "YOUR_API_KEY_HERE",
+    // Vercel sẽ thay thế @gemini-api-key bằng giá trị thật
+    API_KEY: "@gemini-api-key",
     
     API_URL: "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
     MAX_FILE_SIZE: 5 * 1024 * 1024,
