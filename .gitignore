@@ -25,3 +25,9 @@ node_modules/
 .env
 .env.local
 .env.production
+
+# Configuration files with sensitive data
+config.js
+
+# But allow production config
+!config.prod.js
