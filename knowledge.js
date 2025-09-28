@@ -1,0 +1,12 @@
+// knowledge.js
+// Đặt tài liệu nền cho chatbot tại đây. Bạn có thể dán nội dung dài.
+// Gợi ý: Nếu tài liệu rất dài, hãy cân nhắc rút gọn thành các điểm chính.
+
+window.DOMAIN_KNOWLEDGE = `
+Hư vô – khoảng trống để con người tìm thấy chính mình
+Có lẽ trong đời, ai cũng đôi lần chạm đến “hư vô”: khoảnh khắc nhìn bầu trời đêm mênh mông, tự hỏi sự sống của mình nhỏ bé thế nào; hay khi buông tay một điều từng nắm giữ, mới thấy hóa ra mọi thứ đều mong manh, chẳng có gì là vĩnh cửu. Nhưng nếu phương Tây thường nhìn “hư vô” như vực thẳm khủng hoảng, thì trong truyền thống Đông phương – đặc biệt ở Lão giáo và Thiền học – hư vô lại hiện ra như một nẻo về sáng suốt, một không gian để con người thảnh thơi và tự do.
+Lão Tử từng nói: “Có lợi ích của cái hữu, nhưng chính cái vô mới làm nên công dụng.” Ngôi nhà xây nên từ gỗ, gạch, nhưng nếu không có khoảng trống bên trong, nó không thể trở thành chỗ ở. Chiếc bình có hình dạng, nhưng nhờ chỗ rỗng ruột mà ta có thể chứa nước. Trong cách nhìn ấy, hư vô không phải là thiếu vắng, mà là điều kiện để sự sống triển nở. Nó giống như khoảng lặng trong một bản nhạc – không có khoảng lặng, âm thanh chẳng thể ngân vang.
+Thiền học cũng vậy. Các thiền sư không mỏi miệng nói về “tính không”. Nhưng “không” ở đây không phải là hư vô tuyệt vọng, mà là sự buông bỏ mọi dính mắc, để thấy vạn pháp vốn vô thường, vô ngã, duyên sinh. Khi tâm không còn vướng bận, không còn níu giữ, ta mới có thể sống trọn vẹn trong từng giây phút. Thiền sư Huệ Năng từng dạy: “Bản lai vô nhất vật” – xưa nay vốn chẳng có gì. Câu ấy không hạ thấp đời sống, mà mở ra cho ta một chân trời tự do: nếu chẳng có gì là cố định, thì ta có thể sống nhẹ nhàng, sáng tạo, vô ngại.
+Với người trẻ hôm nay, “hư vô” có lẽ là một trong những từ đáng sợ nhất. Nó gợi đến sự trống rỗng, sự vô nghĩa. Nhưng nếu học được từ Lão – Thiền, ta sẽ thấy: chính trong khoảng trống ấy, con người có cơ hội tìm lại mình. Khi buông bỏ ồn ào, thôi bám víu vào danh lợi, ta mới nghe được tiếng thì thầm của chính nội tâm. Khi chấp nhận rằng không gì vĩnh viễn, ta mới có can đảm sống hết mình cho hiện tại.
+Vậy nên, “hư vô” không phải là cái hố đen hút ta xuống, mà là mảnh đất màu mỡ để gieo hạt tự do và sáng tạo. Nó dạy ta biết lùi một bước, để thấy cuộc đời rộng mở. Nó nhắc ta buông một nắm cát, để bàn tay trống rỗng mà đón nhận cả dòng sông. Và có lẽ, khi con người dám sống với “hư vô” theo tinh thần Lão – Thiền, chúng ta sẽ tìm thấy một niềm an nhiên sâu xa hơn bất cứ thành công hay thất bại nào.
+`; 

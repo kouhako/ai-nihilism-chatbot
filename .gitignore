@@ -1,16 +1,13 @@
-# Configuration files with sensitive data
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# API Keys and secrets
 config.js
-
-# Backup files
-*.backup
-script_backup.js
-
-# Logs
-*.log
-
-# OS generated files
-.DS_Store
-Thumbs.db
+*.key
+secrets.json
 
 # IDE files
 .vscode/
@@ -18,16 +15,18 @@ Thumbs.db
 *.swp
 *.swo
 
-# Node modules (if using npm)
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Dependencies
 node_modules/
+npm-debug.log*
 
-# Environment files
-.env
-.env.local
-.env.production
-
-# Configuration files with sensitive data
-config.js
-
-# But allow production config
-!config.prod.js
+# Build files
+dist/
+build/

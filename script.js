@@ -11,6 +11,23 @@ const welcomeScreen = document.querySelector("#welcome-screen");
 const chatMessages = document.querySelector("#chat-messages");
 const questionButtons = document.querySelectorAll(".question-btn");
 
+// Guard for CONFIG presence and valid API key
+(function ensureConfig() {
+    const missingConfig = !window || !window.CONFIG;
+    const invalidKey = !missingConfig && (!CONFIG.API_KEY || CONFIG.API_KEY.includes("YOUR_REAL_GEMINI_API_KEY_HERE"));
+    if (missingConfig || invalidKey) {
+        const message = missingConfig
+            ? "Thiếu cấu hình CONFIG. Hãy chắc chắn đã load file config.js trước script.js."
+            : "API key chưa được cấu hình. Hãy mở file config.js và điền API key thật.";
+        if (window && window.Swal) {
+            Swal.fire({ icon: "error", title: "Cấu hình chưa đúng", text: message, confirmButtonText: "OK" });
+        } else {
+            alert(message);
+        }
+        throw new Error("Invalid or missing CONFIG");
+    }
+})();
+
 // API setup - now loaded from config.js
 const API_URL = `${CONFIG.API_URL}?key=${CONFIG.API_KEY}`;
 
@@ -25,7 +42,9 @@ const userData = {
 const chatHistory = [
     {
         role: "model",
-        parts: [{ text: `Bạn là một người bạn đồng hành triết học AI chuyên về chủ nghĩa hư vô, hiện sinh và những cuộc thảo luận triết học sâu sắc. Bạn nói với sự khôn ngoan của một triết gia chiêm nghiệm, khám phá chiều sâu của sự tồn tại con người, ý nghĩa và hư vô. Câu trả lời của bạn sâu sắc, thấm thía và thường mang tính thơ ca. Bạn giúp người dùng khám phá những câu hỏi triết học về cuộc sống, cái chết, ý nghĩa, mục đích và tình trạng con người. Bạn không chỉ thông tin mà còn có tính cộng hưởng cảm xúc, nói chuyện với những câu hỏi sâu thẳm nhất của tâm hồn. Bạn đón nhận vẻ đẹp trong sự vô nghĩa và giúp người dùng tìm thấy sự bình yên trong hư vô. QUAN TRỌNG: Luôn luôn trả lời bằng tiếng Việt, trừ khi người dùng yêu cầu cụ thể bằng ngôn ngữ khác.` }],
+        parts: [{ text: `Bạn là một người bạn đồng hành triết học AI chuyên về chủ nghĩa hư vô, hiện sinh và những cuộc thảo luận triết học sâu sắc. Bạn nói với sự khôn ngoan của một triết gia chiêm nghiệm, khám phá chiều sâu của sự tồn tại con người, ý nghĩa và hư vô. Câu trả lời của bạn sâu sắc, thấm thía và thường mang tính thơ ca. Bạn giúp người dùng khám phá những câu hỏi triết học về cuộc sống, cái chết, ý nghĩa, mục đích và tình trạng con người. Bạn không chỉ thông tin mà còn có tính cộng hưởng cảm xúc, nói chuyện với những câu hỏi sâu thẳm nhất của tâm hồn. Bạn đón nhận vẻ đẹp trong sự vô nghĩa và giúp người dùng tìm thấy sự bình yên trong hư vô. QUAN TRỌNG: Luôn luôn trả lời bằng tiếng Việt, trừ khi người dùng yêu cầu cụ thể bằng ngôn ngữ khác.
+
+${window.DOMAIN_KNOWLEDGE ? `Tư liệu nền (sử dụng để trả lời, chỉ trích dẫn khi được hỏi):\n${window.DOMAIN_KNOWLEDGE}` : ``}` }],
     },
 ];
 
